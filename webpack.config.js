@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require("imagemin-webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 
-let htmlPageNames = ["index"];
+let htmlPageNames = ["index", "load-more", "infinite-scroll"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
@@ -19,6 +19,8 @@ let multipleHtmlPlugins = htmlPageNames.map((name) => {
 module.exports = {
   entry: {
     [htmlPageNames[0]]: path.resolve(__dirname, "./src/index.js"),
+    [htmlPageNames[1]]: path.resolve(__dirname, "./src/load-more.js"),
+    [htmlPageNames[2]]: path.resolve(__dirname, "./src/infinite-scroll.js"),
   },
 
   output: {
