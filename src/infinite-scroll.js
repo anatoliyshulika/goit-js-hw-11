@@ -1,6 +1,4 @@
 import "./styles/main.scss";
-// import Notiflix from "notiflix";
-// import SimpleLightbox from "simplelightbox";
 import r from "./js/domElementsRefs";
 import firstRequest from "./js/firstRequest-IS";
 import loadMoreRequest from "./js/loadMoreRequest-IS";
@@ -26,34 +24,3 @@ r.formRef.addEventListener("submit", (e) => {
 
   window.addEventListener("scroll", loadByScroll);
 });
-
-// window.addEventListener("scroll", loadByScroll);
-
-// r.loadMoreBtnRef.addEventListener("click", () => {
-//   loadMoreRequest(searchValue, page, imgPerPage);
-//   page += 1;
-// });
-
-// if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
-//   console.log("Srabotal scroll vnutri if");
-//   loadMoreRequest(searchValue, page, imgPerPage);
-//   page += 1;
-// }
-
-// r.divGalleryRef.scrollTop + r.divGalleryRef.clientHeight >= r.divGalleryRef.scrollHeight
-
-//  () => {
-//    console.log("Srabotal scroll");
-//    console.log("document.body.offsetHeight", document.body.offsetHeight);
-//    console.log("window.innerHeight", window.innerHeight);
-//    console.log("window.pageYOffset", window.pageYOffset);
-//    console.log(
-//      "window.innerHeight + window.pageYOffset",
-//      parseInt(window.innerHeight + window.pageYOffset)
-//    );
-//    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
-//      console.log("Srabotal scroll vnutri if");
-//      loadMoreRequest(searchValue, page, imgPerPage);
-//      page += 1;
-//    }
-//  };
