@@ -35,6 +35,9 @@ export default function firstRequest(page, imgPerPage) {
         if (responseDataObj.totalHits < page * imgPerPage) {
           window.removeEventListener("scroll", loadByScroll);
         }
+      } else {
+        Notiflix.Notify.info("Sorry, but this request has not results!");
+        return;
       }
     })
     .catch((error) => {
